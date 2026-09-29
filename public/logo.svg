@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient & Shadow -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#242424"/>
+      <stop offset="100%" stop-color="#141414"/>
+    </linearGradient>
+    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2.5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Container Box with Rounded Corners -->
+  <rect x="5" y="5" width="90" height="90" rx="22" ry="22" 
+        fill="url(#bgGrad)" 
+        stroke="#333333" 
+        stroke-width="2.5" />
+  <rect x="7" y="7" width="86" height="86" rx="20" ry="20" 
+        fill="none" 
+        stroke="#1a1a1a" 
+        stroke-width="1.5" />
+
+  <!-- Neon Green >_ Terminal Emblem -->
+  <g filter="url(#neonGlow)">
+    <!-- Chevron '>' -->
+    <path d="M 32 30 L 52 48 L 32 66" 
+          fill="none" 
+          stroke="#84cc16" 
+          stroke-width="9" 
+          stroke-linecap="round" 
+          stroke-linejoin="round" />
+    
+    <!-- Cursor '_' -->
+    <line x1="56" y1="66" x2="74" y2="66" 
+          stroke="#84cc16" 
+          stroke-width="9" 
+          stroke-linecap="round" />
+  </g>
+</svg>

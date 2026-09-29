@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+:root {
+  /* DevArticle — Charcoal Black & White */
+  --bg: #121212;
+  --surface: #1a1a1a;
+  --elevated: #222222;
+  --border: #2a2a2a;
+  --text-primary: #e8e8e8;
+  --text-secondary: #999999;
+  --text-muted: #666666;
+  --accent: #e8e8e8;
+  --accent-theme: #a3e635;
+  --success: #888888;
+  --warning: #aaaaaa;
+  --error: #cccccc;
+  --code-bg: #161616;
+}
+
+.text-accent-theme {
+  color: var(--accent-theme) !important;
+}
+
+.bg-accent-theme {
+  background-color: var(--accent-theme) !important;
+}
+
+.border-accent-theme {
+  border-color: var(--accent-theme) !important;
+}
+
+
+@theme inline {
+  --color-background: var(--bg);
+  --color-foreground: var(--text-primary);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #2a2a2a #121212;
+}
+
+body {
+  background-color: #121212;
+  color: #e8e8e8;
+  font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
+}
+
+/* Custom scrollbar for Webkit */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #121212;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2a2a2a;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3a3a3a;
+}
+
+/* Selection */
+::selection {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+}
+
+/* Focus ring */
+*:focus-visible {
+  outline: 1px solid #555555;
+  outline-offset: 2px;
+}
+
+/* Transitions */
+input,
+textarea,
+select,
+button {
+  transition: border-color 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease;
+}
